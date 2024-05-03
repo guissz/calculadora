@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #f08080, #dc143c);
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.calculadora {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 110px;
+}
+
+.display {
+    background-color: #fff;
+    width: 100%;
+    height: 3.2rem;
+    padding: 0.5rem;
+    text-align: end;
+    font-size: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.botoes button {
+    width: calc(25% - 2px); 
+    padding: 20px; 
+    margin: 1px;
+    margin-top: 10px; 
+    text-align: center; 
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #313131; 
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    color: #fff;
+    transition: ease .5s;
+}
+
+.botoes button:hover {
+    background-color: #757575;
+}
+
+.botoes button#limpar-calculo,
+.botoes button#limpar-entrada {
+    background-color: #6b6d6e;
+    color: #dc143c;
+}
+
+.botoes button#limpar-calculo:hover,
+.botoes button#limpar-entrada:hover {
+    background-color: #525252;;
+}
+
+.botoes button#apagar {
+    background-color: #6b6d6e;
+    color: #00ff00;
+}
+
+.botoes button#apagar:hover {
+    background-color: #525252;;
+}
+
+.botoes button[id*=operador] {
+    background-color: #6b6d6e;
+    color: #00ff00;
+}
+
+.botoes button[id*=operador]:hover {
+    background-color: #525252;
+}
+
+.botoes button#calcular {
+    background-color: #00ff00;
+    color: #fff;
+}
+
+.botoes button#calcular:hover {
+    background-color: #1e701e;
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        background-image: none;
+        background-color: #000;
+    }
+
+    h1 {
+        display: none;
+    }
+    
+    .calculadora {
+        border-radius: 0;
+        margin: 0;
+        height: 80%;
+        gap: 2.5rem
+    }
+}
